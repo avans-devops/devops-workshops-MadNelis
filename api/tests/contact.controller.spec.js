@@ -29,8 +29,8 @@ describe('ContactController', () => {
     const firstName = 'henk';
     const lastName = 'test';
     const res = await request(app)
-    .post('/contacts')
-    .send({ firstName, lastName: lastName, mobile: '12345566' });
+      .post('/contacts')
+      .send({ firstName, lastName, mobile: '12345566' });
     expect(res.status).toBe(201);
     expect(res.body).toHaveProperty('data');
     expect(res.body.data.firstName).toBe(firstName);
