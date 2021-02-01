@@ -123,9 +123,11 @@ exports.authenticate = (req, res) => {
 
     if (user && bcrypt.compareSync(req.body.password, user.password)) {
       // authentication successful
+      // eslint-disable-next-line no-param-reassign,no-underscore-dangle
       user.token = jwt.sign({ sub: user._id }, environment.secret, {
         algorithm: 'HS256',
       });
+      // eslint-disable-next-line no-param-reassign
       delete user.password;
       res.json({
         status: 'success',
@@ -154,6 +156,7 @@ exports.changePassword = (req, res) => {
     if (user && bcrypt.compareSync(req.body.password, user.password)) {
       // authentication successful
       if (req.body.password) {
+        // eslint-disable-next-line no-param-reassign
         user.password = bcrypt.hashSync(req.body.password, 10);
       }
       user.save((saveErr) => {
