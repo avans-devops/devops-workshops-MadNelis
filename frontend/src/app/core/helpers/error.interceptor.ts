@@ -31,6 +31,7 @@ export class ErrorInterceptor implements HttpInterceptor {
 }
 
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export const ErrorInterceptorProvider = {
   provide: HTTP_INTERCEPTORS,
   useClass: ErrorInterceptor,
