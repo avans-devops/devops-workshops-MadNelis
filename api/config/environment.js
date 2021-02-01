@@ -1,10 +1,17 @@
-const username = '';
-const password = '';
-const host = 'localhost';
-const port = '27017';
-const database = 'Connections';
-const params = '';
-const secret = 'MyLittleSecret';
+if (process.env.NODE_ENV !== 'production') {
+  // eslint-disable-next-line global-require
+  require('dotenv').config();
+}
+
+const {
+  username,
+  password,
+  host,
+  port,
+  database,
+  params,
+  secret,
+} = process.env;
 
 let uri = 'mongodb://';
 if (username && password) {
