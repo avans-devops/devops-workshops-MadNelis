@@ -36,7 +36,7 @@ jobs:
     - name: npm install and npm run build
       run: |
         npm i
-        npm run build:prod
+        npm run build:ssr
     - run: npx eslint .
     - run: npm run build
     - name: Push Build to Releases
