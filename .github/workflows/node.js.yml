@@ -19,8 +19,10 @@ jobs:
         node-version: [10.x, 12.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-    
-
+    defaults:
+      run:
+        working-directory: ./api
+        
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -28,10 +30,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-      working-directory: ./api
     - run: npm run build --if-present
-      working-directory: ./api
     - run: npx eslint .
-      working-directory: ./api
     - run: npm test
-      working-directory: ./api
