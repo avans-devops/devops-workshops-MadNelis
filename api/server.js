@@ -1,6 +1,6 @@
 const express = require('express');
 
-// Test github actionn
+// Test github action
 
 const app = express();
 const cors = require('cors');
