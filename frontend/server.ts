@@ -8,7 +8,7 @@ import { AppServerModule } from "./src/main.server";
 import { APP_BASE_HREF } from "@angular/common";
 import { existsSync } from "fs";
 
-// The Express app is exported so that it can be used by serverless Functions.
+// The Express app is exported so that it can be used by serverless Functions..
 // eslint-disable-next-line
 export function app(): express.Express {
   const server = express();
