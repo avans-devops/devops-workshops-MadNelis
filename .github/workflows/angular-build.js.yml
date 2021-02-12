@@ -1,0 +1,46 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Build Angular
+
+on:
+  push:
+    branches:
+      - main
+    paths: frontend/**
+  pull_request:
+    branches:
+    - main
+    paths: frontend/**
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    defaults:
+      run:
+        working-directory: ./frontend
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npx eslint .
+    - run: npm run build
+    - name: npm install and npm run build
+      run: |
+        npm i
+        npm run build:prod
+    - name: Push Build to Releases
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "dist/angular-githubaction/*"
+        token: ${{ secrets.TOKEN }}
