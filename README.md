@@ -1,5 +1,7 @@
 [![Build Angular Actions Status](https://github.com/avans-devops/devops-workshops-MadNelis/workflows/Build%20Angular/badge.svg)](https://github.com/avans-devops/devops-workshops-MadNelis/actions)
 
+[![Node.js CI Actions Status](https://github.com/avans-devops/devops-workshops-MadNelis/workflows/Node.js%20CI/badge.svg)](https://github.com/avans-devops/devops-workshops-MadNelis/actions)
+
 # DevOps-starter
 
 Dit is de starter github repository voor de DevOps course van Avans Informatica 's Hertogenbosch blok 11 DevOps.
