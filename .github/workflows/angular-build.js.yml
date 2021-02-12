@@ -34,11 +34,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install and npm run build
-      run: |
-        npm i
-        npm run build:ssr
+      run: npm i
     - run: npx eslint .
-    - run: npm run build
+    - run: npm run  build:ssr
     - name: Push Build to Releases
       uses: ncipollo/release-action@v1
       with:
