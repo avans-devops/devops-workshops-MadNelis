@@ -1,4 +1,4 @@
-[![Build Angular Actions Status](https://github.com/MadNelis/avans-devops/devops-workshops-MadNelis/workflows/Build%20Angular/badge.svg)](https://https://github.com/MadNelis/avans-devops/devops-workshops-MadNelis/actions/)
+[![Build Angular Actions Status](https://github.com/MadNelis/avans-devops/devops-workshops-MadNelis/workflows/Build%20Angular/badge.svg)](https://github.com/MadNelis/avans-devops/devops-workshops-MadNelis/actions/)
 
 # DevOps-starter
 
