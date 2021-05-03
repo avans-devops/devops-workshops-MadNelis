@@ -10,11 +10,8 @@ on:
     paths: frontend/**
   pull_request:
     branches:
-    - main
+      - main
     paths: frontend/**
-  create:
-    tags:
-      - v*
 
 jobs:
   build:
