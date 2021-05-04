@@ -9,22 +9,22 @@ Kijk op de blackboard course om de opdrachten voor deze repository te verbeteren
 ## **Docker setup:**
 **API**  
 In api folder, build image
-1. `docker build -t api .`
+1. `docker build -t api .`  
 // Create the container with live reload
-2. ``docker create --network mynetwork -v \`pwd\`:/app -p 3000:3000 --name api --env DB=mongo api npm run dev-server``
+2. ``docker create --network mynetwork -v \`pwd\`:/app -p 3000:3000 --name api --env DB=mongo api npm run dev-server``  
 // Start the container
 3. `docker start api`
 
 **FRONTEND**  
 In frontend folder, build image
-1. `docker build -t frontend .`
+1. `docker build -t frontend .`  
 // Create container
-2. `docker create --network mynetwork -p 4200:4200 --name frontend frontend`
+2. `docker create --network mynetwork -p 4200:4200 --name frontend frontend`  
 // Start the container
 3. `docker start frontend`
 
 **DATABASE**  
 Create the container from standard mongo image. Run from parent folder (or from wherever the data folder is)
-1. ``docker create --name mongo --network mynetwork -v `pwd`/data:/data/db -p 27017:27017 mongo``
+1. ``docker create --name mongo --network mynetwork -v `pwd`/data:/data/db -p 27017:27017 mongo``  
 // Start the container
 2. `docker start mongo`
