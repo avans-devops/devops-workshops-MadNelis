@@ -6,7 +6,7 @@ Dit is de starter github repository voor de DevOps course van Avans Informatica 
 
 Kijk op de blackboard course om de opdrachten voor deze repository te verbeteren.
 
-## **Docker setup:**
+## **Docker setup part 1 (Week 3):**
 **API**  
 In api folder, build image
 1. `docker build -t api .`  
