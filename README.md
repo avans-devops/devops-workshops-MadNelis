@@ -7,7 +7,7 @@ Dit is de starter github repository voor de DevOps course van Avans Informatica 
 Kijk op de blackboard course om de opdrachten voor deze repository te verbeteren.
 
 ## **Docker setup:**
-**API**
+**API**  
 In api folder, build image
 1. `docker build -t api .`
 // Create the container with live reload
@@ -15,7 +15,7 @@ In api folder, build image
 // Start the container
 3. `docker start api`
 
-**FRONTEND**
+**FRONTEND**  
 In frontend folder, build image
 1. `docker build -t frontend .`
 // Create container
@@ -23,7 +23,7 @@ In frontend folder, build image
 // Start the container
 3. `docker start frontend`
 
-**DATABASE**
+**DATABASE**  
 Create the container from standard mongo image. Run from parent folder (or from wherever the data folder is)
 1. ``docker create --name mongo --network mynetwork -v `pwd`/data:/data/db -p 27017:27017 mongo``
 // Start the container
