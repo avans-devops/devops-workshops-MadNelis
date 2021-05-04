@@ -19,8 +19,10 @@ API API API API
 FRONTEND FRONTEND
 // In frontend folder, build image
 1. docker build -t frontend .
-// Create container and start it
-2. docker run --rm -p 4200:4200 --name frontend frontend
+// Create container
+2. docker create --network mynetwork -p 4200:4200 --name frontend frontend
+// Start the container
+3. docker start frontend
 
 // Create the container from standard mongo image
 1. docker create --name mongo --network mynetwork -p 27017:27017 mongo
