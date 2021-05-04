@@ -24,7 +24,7 @@ FRONTEND FRONTEND
 // Start the container
 3. docker start frontend
 
-// Create the container from standard mongo image
-1. docker create --name mongo --network mynetwork -p 27017:27017 mongo
+// Create the container from standard mongo image. Run in parent folder (or from wherever the data folder is)
+1. docker create --name mongo --network mynetwork -v `pwd`/data:/data/db -p 27017:27017 mongo
 // Start the container
 2. docker start mongo
