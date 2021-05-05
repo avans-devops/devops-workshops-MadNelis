@@ -15,7 +15,7 @@ exports.index = (req, res) => {
       });
     } else {
       res.json({
-        status: 'success',
+        status: 'succes!!!!',
         message: 'Users retrieved successfully',
         data: users,
       });

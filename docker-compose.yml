@@ -2,6 +2,10 @@ version: "3.9"
 services: 
     mongo:
         image: mongo
+        environment: 
+            - MONGO_INITDB_ROOT_USERNAME=root
+            - MONGO_INITDB_ROOT_PASSWORD=password
+            - MONGO_INITDB_DATABASE=devops
         ports:
             - 27017:27017
         volumes:
@@ -12,10 +16,14 @@ services:
             - 3000:3000
         environment: 
             - DB=mongo
+            - USERNAME=root
+            - PASSWORD=password
+            - DATABASE=devops
         volumes: 
             - ./api:/app
         depends_on: 
             - mongo
+        command: npm run dev-server
     frontend:
         build: ./frontend
         ports:
