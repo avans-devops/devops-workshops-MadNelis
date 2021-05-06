@@ -11,6 +11,7 @@ exports.index = (req, res) => {
       });
     }
     res.json({
+      'server name': process.env.SERVERNAME,
       status: 'success',
       message: 'Contacts retrieved successfully',
       data: contacts,

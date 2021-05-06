@@ -83,7 +83,7 @@ app.get('*', (req, res) => {
 const HOST = '0.0.0.0';
 // start server
 // Launch app to listen to specified port
-const server = app.listen(process.env.EXPRESS_PORT || 3000, HOST, () => {
+const server = app.listen(process.env.PORT || 3000, HOST, () => {
   const PORT = server.address().port;
   console.log(`Running  on http://${HOST}:${PORT}`);
 });

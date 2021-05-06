@@ -15,6 +15,7 @@ exports.index = (req, res) => {
       });
     } else {
       res.json({
+        'server name': process.env.SERVERNAME || 'not set',
         status: 'succes!!!!',
         message: 'Users retrieved successfully',
         data: users,
